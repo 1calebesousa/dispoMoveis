@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let operacao;
+
+        do{
+            let operacao = window.prompt(`
+            Qual operação deseja realizar?
+            1 - Soma
+            2 - Subtração
+            3 - Multiplicação
+            4 - Divisão
+            5 - Sair
+            `);
+
+            switch(operacao){
+                case "1":
+                    let n1soma = Number(window.prompt("Digite o primeiro número:"));
+                    let n2soma = Number(window.prompt("Digite o segundo número:"));
+                    window.alert(`O resultado da soma é: ${n1soma + n2soma}`);
+                    break;
+                case "2":
+                    let n1sub = Number(window.prompt("Digite o primeiro número:"));
+                    let n2sub = Number(window.prompt("Digite o segundo número:"));
+                    window.alert(`O resultado da subtração é: ${n1sub - n2sub}`);
+                    break;
+                case "3":
+                    let n1mult = Number(window.prompt("Digite o primeiro número:"));
+                    let n2mult = Number(window.prompt("Digite o segundo número:"));
+                    window.alert(`O resultado da multiplicação é: ${n1mult * n2mult}`);
+                    break;
+                case "4":
+                    let n1div = Number(window.prompt("Digite o primeiro número:"));
+                    let n2div = Number(window.prompt("Digite o segundo número:"));
+                    if(n2div === 0){
+                        window.alert("Não é possível dividir por zero!");
+                    } else {
+                        window.alert(`O resultado da divisão é: ${n1div / n2div}`);
+                    }
+                    break;
+                case "5":
+                    window.alert("Saindo...");
+                    break;
+                default:
+                    window.alert("Operação inválida! Por favor, escolha uma opção entre 1 e 5.");
+            }
+        }while(operacao !== "5")
+    </script>
+</body>
+</html>

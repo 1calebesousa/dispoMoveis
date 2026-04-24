@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let saldo = 1000;
+        let opcao = prompt(`Saldo atual: R$ ${saldo.toFixed(2)} \n
+        Escolha uma opção: \n
+        1 - Sacar \n
+        2 - Depositar \n
+        3 - Consultar saldo \n
+        4 - Sair`);
+        
+        switch (opcao) {
+            case "1":
+                let valorSaque = Number(prompt("Digite o valor a ser sacado:"));
+                if (valorSaque > saldo) {
+                    alert("Saldo insuficiente.");
+                } else if (valorSaque <= 0 || isNaN(valorSaque)) {
+                    alert("Valor inválido.");
+                } else {
+                    saldo -= valorSaque;
+                    alert(`Saque realizado. Novo saldo: R$ ${saldo.toFixed(2)}`);
+                }
+                break;
+            case "2":
+                let valorDeposito = Number(prompt("Digite o valor a ser depositado:"));
+                if (valorDeposito <= 0 || isNaN(valorDeposito)) {
+                    alert("Valor inválido.");
+                } else {
+                    saldo += valorDeposito;
+                    alert(`Depósito realizado. Novo saldo: R$ ${saldo.toFixed(2)}`);
+                }
+                break;
+            case "3":
+                alert(`Saldo atual: R$ ${saldo.toFixed(2)}`);
+                break;
+            case "4":
+                alert("Obrigado por usar nosso caixa eletrônico!");
+                break;
+            default:
+                alert("Opção inválida.");
+        }
+    </script>
+</body>
+</html>

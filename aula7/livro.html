@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let continuar;
+        let livros = [];
+
+        do{
+            let livro = prompt("Digite o nome do livro que você leu:");
+
+            if(livro === null || livro.trim() === "") {
+                alert("Por favor, digite um nome de livro válido.");}
+                continue;
+            }
+
+            livros.push(livro);
+            
+            continuar = prompt(
+                "Deseja cadastrar outro livro? (s/n)"
+            )?.toLowerCase()
+        } while (continuar === "s");
+
+        alert(`Você cadastrou ${livros.length} livros: \n \n${livros.join("\n")}`);
+    </script>
+</body>
+</html>

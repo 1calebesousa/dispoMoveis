@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let soma = 0;
+
+        for ( i = 0; i < 7 ; i++){
+            let horas = Number(window.prompt("Digite quantas horas você passou no celular hoje:"));
+            soma += horas;
+        }
+
+        let media = soma / 7;
+        window.alert(`A média de horas que você passou no celular por dia é: ${media.toFixed(2)} horas.`);
+        if (media <= 2){
+            window.alert("Você usa de forma saudável!");
+        }
+        else if (media > 3 && media <= 5){
+            window.alert("Cuidado!");
+        }
+        else {
+            window.alert("Uso excessivo!");
+        }
+    </script>
+</body>
+</html>

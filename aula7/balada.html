@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balada</title>
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
     <script>
-        let idade = Number(prompt(`Digite sua idade:`));
+        let idade = Number(prompt("Digite sua idade:"));
 
         if (isNaN(idade)) {
-            alert(`Erro: Você precisa digitar um número válido para a idade!`);
-        } 
-
-        else if (idade >= 18) {
-            alert(`Vou dar uma volta em Torres e depois ir no Vala`);
-        }
-
-        else if (idade >= 16 && idade < 18) {
-            alert(
-                `Não posso entrar, mas vou no esquenta\nMeus pais vão me buscar às 23:00`
-            );
-        }
-
-        else {
-            alert(`Que abuso!!\nVou ficar em casa jogando.`);
+            console.log("Valor inválido. Por favor, insira um número.");
+        } else if (idade > 18) {
+            alert("Vou dar uma volta na Gaiva e depois ir no Mailing");
+        } else if (idade < 18 && idade >= 16) {
+            alert("Não posso entrar mas vou no esquenta" );
+            alert("Meus pais vão me buscar as 23h");
+        } else {
+            alert("que abuso, vou ficar jogando em casa");
         }
     </script>
-    
 </body>
 </html>

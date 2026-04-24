@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tentativas = 0;
+        const LIMITE = 3;
+        
+        while (tentativas < LIMITE) {
+            let senha = prompt(`Tentativa ${tentativas + 1}/${LIMITE}: Digite a senha:`);
+            tentativas++;
+
+            if (senha === "1234") {
+                alert("Acesso permitido!");
+                break;
+            } else {
+                alert(`Senha incorreta.`);
+            }
+        }
+
+        if (tentativas === LIMITE) {
+            alert("Número máximo de tentativas atingido. Acesso negado.");
+        }
+    </script>
+</body>
+</html>
